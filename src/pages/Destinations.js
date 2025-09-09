@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 const Destinations = ({ addToVisitList, visitList }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -155,11 +156,12 @@ const Destinations = ({ addToVisitList, visitList }) => {
           <div className="grid grid-2">
             {filteredDestinations.map((destination) => (
               <div key={destination.id} className="card destination-card">
-                <img 
-                  src={destination.image} 
-                  alt={destination.name}
-                  className="destination-image"
-                />
+            <ImageWithFallback 
+              src={destination.image} 
+              fallbackSrc="/images/placeholder-destination.svg"
+              alt={destination.name}
+              className="destination-image"
+            />
                 <div className="destination-content">
                   <h3 className="destination-title">{destination.name}</h3>
                   <p className="destination-description">{destination.description}</p>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './DestinationDetail.css';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 const DestinationDetail = ({ addToVisitList, visitList }) => {
   const { id } = useParams();
@@ -261,7 +262,12 @@ const DestinationDetail = ({ addToVisitList, visitList }) => {
   return (
     <div className="destination-detail">
       {/* Hero Section */}
-      <section className="destination-hero" style={{backgroundImage: `url(${destination.image})`}}>
+      <section className="destination-hero" style={{
+        backgroundImage: `linear-gradient(135deg, rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7)), url(${destination.image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div className="hero-overlay">
           <div className="container">
             <div className="hero-content">
@@ -327,7 +333,12 @@ const DestinationDetail = ({ addToVisitList, visitList }) => {
                 <h2>Photo Gallery</h2>
                 <div className="photo-gallery">
                   {destination.gallery.map((image, index) => (
-                    <img key={index} src={image} alt={`${destination.name} ${index + 1}`} />
+                    <ImageWithFallback 
+                      key={index} 
+                      src={image} 
+                      fallbackSrc="/images/placeholder-destination.svg"
+                      alt={`${destination.name} ${index + 1}`} 
+                    />
                   ))}
                 </div>
               </section>

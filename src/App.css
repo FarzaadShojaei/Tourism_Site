@@ -10,7 +10,7 @@ main {
 
 .hero-section {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)),
-              url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3') center/cover;
+              url('./placeholder-hero.svg') center/cover;
   color: white;
   padding: 120px 0;
   text-align: center;
@@ -316,7 +316,7 @@ main {
 /* About Page Styles */
 .about-hero {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)),
-              url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3') center/cover;
+              url('./placeholder-hero.svg') center/cover;
   color: white;
   padding: 80px 0;
   text-align: center;
@@ -504,7 +504,7 @@ main {
 /* Contact Page Styles */
 .contact-hero {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)),
-              url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3') center/cover;
+              url('./placeholder-hero.svg') center/cover;
   color: white;
   padding: 80px 0;
   text-align: center;

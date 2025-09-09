@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 const About = () => {
   const teamMembers = [
@@ -82,8 +83,9 @@ const About = () => {
               </p>
             </div>
             <div className="story-image">
-              <img 
+              <ImageWithFallback 
                 src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                fallbackSrc="/images/placeholder-destination.svg"
                 alt="Our story"
                 style={{width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px'}}
               />
